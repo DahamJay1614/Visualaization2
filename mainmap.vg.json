@@ -9,10 +9,10 @@
   },
   "transform": [
     {
-      "filter": "datum.Year == yearSelection"
+      "filter": "datum.Year == yearSelection"  // Filter for the selected year
     },
     {
-      "lookup": "Code",  // Matches Code from CSV with ISO_A3 in TopoJSON
+      "lookup": "Code",
       "from": {
         "data": {
           "url": "https://raw.githubusercontent.com/DahamJay1614/Visualaization2/refs/heads/main/ne_110m_admin_0_countries1.topojson",
@@ -21,8 +21,8 @@
             "feature": "ne_110m_admin_0_countries"
           }
         },
-        "key": "properties.ISO_A3",  // Matches ISO_A3 in TopoJSON
-        "fields": ["type","geometry", "properties.NAME"]
+        "key": "properties.ISO_A3",
+        "fields": ["type", "geometry", "properties.NAME"]
       }
     }
   ],
@@ -32,7 +32,6 @@
   "mark": {
     "type": "geoshape",
     "stroke": "black"
-    
   },
   "params": [
     {
@@ -40,18 +39,20 @@
       "value": 2021,
       "bind": {
         "input": "select",
-        "options": [2018,2019, 2020, 2021],
+        "options": [2018, 2019, 2020, 2021],
         "name": "Select Year: "
       }
     }
   ],
   "encoding": {
     "color": {
-      "field": "Terrorist attacks",  // Colors by the number of terrorist attacks
+      "field": "Terrorist attacks",  // Correct reference to the field name
       "type": "quantitative",
       "title": "Number of Attacks",
-      "scale": {"range": ["#ffffff", "#ff0000"],  // Gradient from white to red
-        "domain": [0, 2000]}  // Red color scheme to indicate intensity
+      "scale": {
+        "range": ["#ffffff", "#ff0000"],
+        "domain": [0, 2000]
+      }
     },
     "tooltip": [
       {"field": "properties.NAME", "type": "nominal", "title": "Country"},
