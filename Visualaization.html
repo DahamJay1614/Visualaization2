@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Terrorism Visualizations</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+            margin: 20px;
+            max-width: 1000px;
+        }
+        .chart {
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Global Terrorism Visualizations</h2>
+    <div class="container">
+        <!-- World Map -->
+        <div class="chart" id="world-map"></div>
+        
+        <!-- Bar Chart -->
+        <div class="chart" id="bar-chart"></div>
+        
+        <!-- Bubble Chart -->
+        <div class="chart" id="bubble-chart"></div>
+        
+        <!-- Malaysia Trend Line -->
+        <div class="chart" id="trend-line"></div>
+    </div>
+
+    <script type="text/javascript">
+        // World Map of terrorist attacks
+        vegaEmbed('#world-map', 'https://raw.githubusercontent.com/DahamJay1614/Visualaization2/refs/heads/main/mainmap.vg.json', {
+            "renderer": "svg",
+            "actions": false
+        }).catch(console.error);
+
+        // Bar chart of terrorist attack types
+        vegaEmbed('#bar-chart', 'https://raw.githubusercontent.com/DahamJay1614/Visualaization2/refs/heads/main/Bar%20chart.vg.json').catch(console.error);
+
+        // Bubble chart of terrorist attacks over the years
+        vegaEmbed('#bubble-chart', 'https://raw.githubusercontent.com/DahamJay1614/Visualaization2/refs/heads/main/Bubble%20chart.vg.json').catch(console.error);
+
+        // Trend line and bar chart for Malaysia terrorist attacks and deaths
+        vegaEmbed('#trend-line', 'https://raw.githubusercontent.com/DahamJay1614/Visualaization2/refs/heads/main/Bubble%20chart.vg.json').catch(console.error);
+    </script>
+</body>
+</html>
