@@ -1,0 +1,61 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Trend Line of Total Terrorist Attacks and Bar Chart of Total Deaths in Malaysia (2000 to 2021)",
+  "title": "Total Terrorist Attacks and Total Deaths in Malaysia",
+  "data": {
+    "url": "https://raw.githubusercontent.com/DahamJay1614/Visualaization2/refs/heads/main/Visualization%202%20Terrorist%20Data%20set.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {"filter": "datum.Entity == 'Malaysia'"},
+    {"filter": "datum.Year >= 2010 && datum.Year <= 2021"},
+    {"calculate": "toNumber(datum.Year)", "as": "Year"}
+  ],
+  "layer": [
+    {
+      "mark": {"type": "bar", "opacity": 0.5, "color": "#60b446"},
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "title": "Year",
+          "axis": {"format": "d"}
+        },
+        "y": {
+          "field": "Terrorism deaths",
+          "type": "quantitative",
+          "title": "Total Number of Deaths"
+        },
+        "tooltip": [
+          {"field": "Year", "type": "quantitative", "title": "Year"},
+          {"field": "Terrorism deaths", "type": "quantitative", "title": "Total Deaths"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "line", "point": {"size": 80, "filled": true}, "color": "#FF6347"},
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "title": "Year",
+          "axis": {"format": "d"}
+        },
+        "y": {
+          "field": "Terrorist attacks",
+          "type": "quantitative",
+          "title": "Total Number of Terrorist Attacks"
+        },
+        "tooltip": [
+          {"field": "Year", "type": "quantitative", "title": "Year"},
+          {"field": "Terrorist attacks", "type": "quantitative", "title": "Number of Attacks"}
+        ]
+      }
+    }
+  ],
+  "resolve": {
+    "scale": {"y": "independent"}
+  },
+  "width": 800,
+  "height": 400
+}
