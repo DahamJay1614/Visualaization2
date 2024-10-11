@@ -9,7 +9,7 @@
   },
   "transform": [
     {
-      "filter": "datum.Year == yearSelection"  // Filter for the selected year
+      "filter": "datum.Year == yearSelection"  
     },
     {
       "lookup": "Code",
@@ -46,7 +46,7 @@
   ],
   "encoding": {
     "color": {
-      "field": "Terrorist attacks",  // Correct reference to the field name
+      "field": "Terrorist attacks",  
       "type": "quantitative",
       "title": "Number of Attacks",
       "scale": {
