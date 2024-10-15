@@ -39,18 +39,18 @@
       "value": 2021,
       "bind": {
         "input": "select",
-        "options": [2018, 2019, 2020, 2021],
+        "options": [2001,2013,2014,2015,2016,2017,2018, 2019, 2020, 2021],
         "name": "Select Year: "
       }
     }
   ],
   "encoding": {
     "color": {
-      "field": "Terrorist attacks",  
+      "field": "Terrorist attacks",
       "type": "quantitative",
       "title": "Number of Attacks",
       "scale": {
-        "range": ["#ffffff", "#ff0000"],
+        "range": ["#ffffb2", "#fecc5c", "#fd8d3c", "#e31a1c", "#b10026"],
         "domain": [0, 2000]
       }
     },
