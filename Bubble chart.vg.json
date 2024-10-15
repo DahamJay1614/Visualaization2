@@ -40,7 +40,7 @@
       "field": "Terrorism deaths",
       "type": "quantitative",
       "scale": {"range": [100, 2000]},
-      "legend": {"title": "Size: Number of Deaths"}
+      "legend": null
     },
     "color": {
       "field": "Entity",
