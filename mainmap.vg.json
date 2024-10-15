@@ -27,7 +27,7 @@
     }
   ],
   "projection": {
-    "type": "mercator"
+    "type": "naturalEarth1"
   },
   "mark": {
     "type": "geoshape",

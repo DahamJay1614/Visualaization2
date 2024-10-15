@@ -13,7 +13,7 @@
   ],
   "layer": [
     {
-      "mark": {"type": "bar", "opacity": 0.5, "color": "#60b446"},
+      "mark": {"type": "bar", "opacity": 0.5, "color": "#1f77b4"},
       "encoding": {
         "x": {
           "field": "Year",
@@ -33,7 +33,7 @@
       }
     },
     {
-      "mark": {"type": "line", "point": {"size": 80, "filled": true}, "color": "#FF6347"},
+      "mark": {"type": "line", "point": {"size": 80, "filled": true}, "color": "#ff7f0e"},
       "encoding": {
         "x": {
           "field": "Year",

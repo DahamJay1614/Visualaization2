@@ -22,7 +22,7 @@
       "value": "India",
       "bind": {
         "input": "select",
-        "options": ["Malaysia", "Afghanistan", "India", "Iraq", "Nigeria", "Pakistan","United States"],
+        "options": ["Malaysia", "Afghanistan", "India", "Iraq", "Nigeria", "Pakistan", "United States"],
         "name": "Select Country: "
       }
     }
@@ -57,7 +57,14 @@
       "type": "quantitative",
       "title": "Number of Attacks"
     },
-    "color": {"field": "Attack Type", "type": "nominal", "legend": null},
+    "color": {
+      "field": "Attack Type",
+      "type": "nominal",
+      "scale": {
+        "scheme": "tableau10" 
+      },
+      "legend": null
+    },
     "tooltip": [
       {"field": "Attack Type", "type": "nominal", "title": "Type of Attack"},
       {"field": "Number of Attacks", "type": "quantitative", "title": "Number of Attacks"}

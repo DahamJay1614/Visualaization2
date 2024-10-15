@@ -42,7 +42,9 @@
       "scale": {"range": [100, 2000]},
       "legend": {"title": "Number of Attacks"}
     },
-    "color": {"field": "Entity", "type": "nominal", "legend": null},
+    "color": {"field": "Entity", "type": "nominal","scale": {
+    "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f"]
+  }, "legend": null},
     "tooltip": [
       {"field": "Entity", "type": "nominal", "title": "Country"},
       {"field": "Year", "type": "quantitative", "title": "Year"},
