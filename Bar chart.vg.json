@@ -61,7 +61,10 @@
       "field": "Attack Type",
       "type": "nominal",
       "scale": {
-        "scheme": "tableau10" 
+        "range": [
+          "#4C78A8", "#F58518", "#72B7B2", "#EECA3B", 
+          "#B279A2", "#9D755D", "#A0CBE8", "#8C564B"
+        ]
       },
       "legend": null
     },
